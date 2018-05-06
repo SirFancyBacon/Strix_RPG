@@ -1,6 +1,49 @@
 ##Below is a geneirc list of items and their damage values to give consistency within the codebase ##
 #####################################################################################################
 
+***SCALING***
+I have based the scaling off of armor and used a type of "class" system.
+My reason for this is Armor currently is hard coded and i cannot change it's values.
+Below is the games armor progression (Again hard coded for now)
+
+WOOD
+STONE
+GOLD, CHAINMAIL (Keep weapon damage higher than IRON)
+IRON
+EMERALD, MALACHITE (I'd put the weapon damage higher than DIAMOND)
+DIAMOND, SAPPHIRE, PERIDOT (Yes they have the same stats; i'd change the weapons though)
+TOPAZ
+RUBY, TANZANITE
+AMETHYST
+
+#####################################################################################################
+
+***WEAPON SPEED***
+Item types have different attach speed; below is a list rated from slowest to fastest
+
+AXE (0.9)
+SHOVEL (1.0)
+PICKAXE (1.2)
+SWORD (1.6)
+HOE (varies, starts at 1 with stone and ends at 5.8 with amethyst - GOLDEN_HOE also has a speed of 1)
+
+#####################################################################################################
+***FINAL NOTES***
+[FORMATTING] - This only applies to weapons; armor is completed
+the FORMATTING of weapons goes as followed:
+modded:
+quotation-modname-colon-item_name-semicolon-damage-quotation
+so "shinygear:amethyst_axe;7"
+means the modded item amethyst_axe deals 7 damage.
+
+vanilla:
+quotation-item_name-semicolon-damage-quotation
+so "DIAMOND_AXE;5"
+means the vanilla item DIAMOND_AXE does 5 damage.
+
+
+-----------------------------------------------------------------------------------------------------
+
 AllowedArmor: [
 	LEATHER_BOOTS
 	LEATHER_HELMET
