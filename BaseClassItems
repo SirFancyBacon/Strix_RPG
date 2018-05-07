@@ -11,7 +11,7 @@ STONE
 GOLD, CHAINMAIL (Keep weapon damage higher than IRON)
 IRON
 EMERALD, MALACHITE (I'd put the weapon damage higher than DIAMOND)
-DIAMOND, SAPPHIRE, PERIDOT (Yes they have the same stats; i'd change the weapons though)
+DIAMOND, SAPPHIRE, PERIDOT (Yes they have the same stats; I'd change the weapons though)
 TOPAZ
 RUBY, TANZANITE
 AMETHYST
@@ -19,13 +19,31 @@ AMETHYST
 #####################################################################################################
 
 ***WEAPON SPEED***
-Item types have different attach speed; below is a list rated from slowest to fastest
+Item types have different attach speed; an attack speed of 1 means you swing once per second.
+Below is a list rated from slowest to fastest: [
 
 AXE (0.9)
 SHOVEL (1.0)
 PICKAXE (1.2)
 SWORD (1.6)
-HOE (varies, starts at 1 with stone and ends at 5.8 with amethyst - GOLDEN_HOE also has a speed of 1)
+HOE (varies, See below table for vanilla items; modded items end with amethyst at 5.8)
+		Hoe Speed table: [
+			Wood: 1,
+			Stone: 2,
+			Iron: 3,
+			Gold: 1,
+			Diamond: 4
+		]
+Take the attack speed into account when setting up weapon damage (especially the Hoe)
+]
+
+A simple way to do this is to the following formula:
+Speed*Damage = DPS some examples would be:
+A Diamond Sword has a damage of 5, with an attack speed of 1.6; so the formula reads: 5*1.6=8
+Thus the DPS of a Diamond Sword is 8.
+
+A Diamond Hoe has a damage of 5, with an attack speed of 4; so the formula reads: 4*4=20
+Thus the DPS of the Diamond Hoe is 20.
 
 #####################################################################################################
 ***FINAL NOTES***
