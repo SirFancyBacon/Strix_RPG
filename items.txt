@@ -1,0 +1,30 @@
+items:
+	**Weapons**
+To add weapons to the game, they must first be defined in the "ItemGroups.conf" file; this file is located in your _%MinecraftServerPath%\config\nt-rpg_ folder. This file will be created the first time your server loads; and all weapons (mod items included) will automatically populate.
+
+
+In this file you will find the item names that can be used in your _classname.conf_ and _racename.conf_ files; they will look something like this: "minecraft:diamond_sword"
+
+
+**NOTE:** Any addtional items will need to be added in if you ever add more mods to your server; it is best to simply delete this file and restart your server to add the new items to the game.
+
+
+To add an item to your class/race, open the relavent .conf file and add the following lines:
+
+AllowedWeapons: [
+	"minecraft:diamond_sword;7"
+]
+
+Take note of the addtion of the _;7_ in line you got from your weapon; this is your weapons damage it will do in game.
+
+You must define this for all weapons you wish the class/race to have access to; example:
+
+
+AllowedWeapons: [
+	"minecraft:iron_sword;3"
+	"minecraft:golden_sword;1"
+	"minecraft:diamond_sword;7"
+]
+
+
+
